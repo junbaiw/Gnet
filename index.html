@@ -1,0 +1,198 @@
+<HTML><HEAD><TITLE> 
+New probabilistic graphical models for genetic regulatory networks studies</TITLE>
+</HEAD><BODY BGCOLOR="FFFFF0"><b></b>
+<br><br>
+<h2><b><A href="../papers/science.pdf.gz">
+New probabilistic graphical models for genetic regulatory networks studies 
+</A></b>
+</h2>
+<Br>
+<b><A HREF="mailto:jw2256@columbia.edu">Junbai Wang</a>*
+<b><A HREF="mailto:lcheung@crch.hawaii.edu">Leo Wang-Kit Cheung</a>
+$
+and <A HREF="mailto:jan.delabie@labmed.uio.no">Jan Delabie</a>+
+</b>
+</b>
+<br><br>
+<b>Biological Science Department* 
+Columbia Univesrity
+New York, 10025 
+USA </b>
+<p>
+Epidemiology Section$, Cancer Etiology Program, Cancer Research Center of Hawaii, University of Hawaii, 1236 Lauhala Street, Honolulu, HI 96813, USA
+</p>
+<p>
+Department of Pathology+, The Norwegian Radium Hospital, N0310 OSLO, Norway
+</p> 
+
+<!--start GNET -->
+<br>
+<b>Abstract:</b> <br>
+<br>
+This work introduces two new probabilistic graphical models for reconstruction of genetic regulatory networks using DNA microarray data. 
+One is an Independence Graph (IG) model with either a forward or a backward search algorithm and the other one is a Gaussian Network (GN) model with a novel 
+greedy search method. The performances of both models were evaluated on four MAPK pathways in yeast and three simulated data sets. 
+Generally, an IG model provides a sparse graph but a GN model produces a dense graph where more information about gene-gene interactions is preserved. 
+
+<p>
+
+<br>
+<b>Note:</b>
+<br>
+1) Oct. 2006, I have added new functions (i.e. Gaussian Networks, PC 
+algorithms, Gaussian Graphical Models with forward 
+search algorithm and Independence Graphical Modles) to <a HREF="http://folk.uio.no/junbaiw/mgraph/" target="new"> MGraph Matlab 
+toolbox </a>. MGraph had been tested on PC windows and Linux 
+before releasing the program but bugs may still exist in the code. I am sorry for anyone who encounter problems 
+when running MGraph. I will try my best to improve it and correct potential problems in future. 
+<br><br>
+2) <A HREF=http://folk.uio.no/junbaiw/gtarget/>
+GTarget: A new framework for identifying combinatorial regulation of transcription factors: a case study of the yeast cell-cycle 
+<br><br>
+ Wang J <br>
+ <A href="../papers/jbi-07-12.pdf.gz">
+A new framework for identifying combinatorial regulation of transcription factors: a case study of the yeast cell-cycle.
+<br>
+J Biomed Inform Vol 40/6 pp 707-725, 2007
+</A>
+<br><br>
+<b>Download:</b>
+<br>
+You can download the 
+MGraph toolbox (source code and demo data): <a HREF="http://www.mathworks.com/matlabcentral/fileexchange/14635" target="new">  mgraph.tar.gz <font COLOR="#FFF200" 
+></font></a><b>
+<br>
+Please read "install.txt" and license file before installing the MGraph Matlab toolbox. 
+<br>
+Feel free to use the package in your academic research. If you use it, please
+cite the following papers:
+</b><br>
+<br>
+1) Wang J, Cheung LW, Delabie J.<br>
+   <A href="../papers/science.pdf.gz">  
+   New probabilistic graphical models for genetic regulatory networks studies.<br>
+   J Biomed Inform. 2005 Dec;38(6):443-55.</A> <br>
+<br>
+2) Wang J, Myklebost O, Hovig E. <br> 
+   <A href="../papers/2210.pdf.gz">
+   MGraph: graphical models for microarray data analysis. <br>
+   Bioinformatics. 2003 Nov 22;19(17):2210-1.</A>  <br>
+
+<p> 
+<P>
+</P>
+
+<!-- start P=0.05 IGFD-->
+<br>
+<table>
+<tr><td><b>Independence graph with forward depth-limited search algorithm 
+(IGFD)</b></td></tr>
+</table>
+
+<table border=1>
+<tr><th>1</th>
+<th>PKC pathway</th>
+<th>Filamentous Growth pathway</th>
+<th>HOG pathway</th>
+<th>Pheromone pathway</th>
+</tr><tr><th></th>
+ 
+<td><b> significant level P=0.05</b></td>
+<td><b> significant level P=0.05</b></td>
+<td><b> significant level P=0.05</b></td>
+<td><b> significant level P=0.05</b></td>
+</tr><tr><th> </th>
+ 
+<td height=150 width=155><a target=newFigure 
+href=pkc_pathway_IGFF_out.gif><img width=155
+height=150 src=pkc_pathway_IGFF_out.gif></a></td>
+<td height=150 width=155><a target=newFigure 
+href=filamentous_pathway_IGFF_out.gif><img 
+width=155 height=150 src=filamentous_pathway_IGFF_out.gif></a></td>
+<td height=150 width=155><a target=newFigure 
+href=hog_pathway_IGFF_out.gif><img width=155 
+height=150 src=hog_pathway_IGFF_out.gif></a></td>
+<td height=150 width=155><a target=newFigure 
+href=pheromone_pathway_IGFF_out.gif><img width=155
+height=150 src=pheromone_pathway_IGFF_out.gif></a></td>
+</tr><th></th>
+ 
+<td><b> significant level P=0.2</b></td> 
+<td><b> significant level P=0.3</b></td>
+<td><b> significant level P=0.2</b></td>
+<td><b> significant level P=0.3 </b></td>
+</tr><th></th> 
+
+<td height=150 width=155><a target=newFigure 
+href=pkc_pathway_IGFF_p0.2_out.gif><img width=155
+height=150 src=pkc_pathway_IGFF_p0.2_out.gif></a></td>
+<td height=150 width=155><a target=newFigure 
+href=filamentous_pathway_IGFF_p0.3_out.gif><img
+width=155 height=150 src=filamentous_pathway_IGFF_p0.3_out.gif></a></td>
+<td height=150 width=155><a target=newFigure 
+href=hog_pathway_IGFF_p0.2_out.gif><img width=155
+height=150 src=hog_pathway_IGFF_p0.2_out.gif></a></td>
+<td height=150 width=155><a target=newFigure 
+href=pheromone_pathway_IGFF_p0.3_out.gif><img width=155
+height=150 src=pheromone_pathway_IGFF_p0.3_out.gif></a></td>
+
+</tr>
+<th></th>
+</td>
+</table>
+
+<!-- start P=0.00001 IGFD demo -->
+<br>
+<table>
+<tr><td><b>Independence graph with forward depth-limited search algorithm
+(IGFD)</b></td></tr>
+</table>
+
+<table border=1>
+<tr><th>1</th>
+<th>simulated 40 samples </th>
+<th>simulated 200 samples</th>
+<th>simulated 1000 samples</th>
+</tr><tr><th></th>
+
+<td><b> real network</b></td>
+<td><b> real network</b></td>
+<td><b> real network</b></td>
+</tr><tr><th> </th>
+<td height=150 width=155><a target=newFigure 
+href=Demo_40sample.png><img 
+width=155 height=150 src=Demo_40sample.png></a></td>
+<td height=150 width=155><a target=newFigure 
+href=Demo_200sample.png><img width=155 
+height=150 src=Demo_200sample.png></a></td>
+<td height=150 width=155><a target=newFigure 
+href=Demo_1000sample.png><img width=155
+height=150 src=Demo_1000sample.png></a></td>
+</tr><th></th>
+ 
+<td><b> predicted network P=1E-5</b></td> 
+<td><b> predicted network P=1E-5</b></td>
+<td><b> predicted network P=1E-5</b></td>
+</tr><th></th> 
+
+<td height=150 width=155><a target=newFigure 
+href=Demo_40samples_igfd_predictedNET.png><img
+width=155 height=150 src=Demo_40samples_igfd_predictedNET.png></a></td>
+<td height=150 width=155><a target=newFigure 
+href=Demo_200samples_igfd_predictedNET.png><img width=155
+height=150 src=Demo_200samples_igfd_predictedNET.png></a></td>
+<td height=150 width=155><a target=newFigure 
+href=Demo_1000sample_igfd_predictedNET.png><img width=155
+height=150 src=Demo_1000sample_igfd_predictedNET.png></a></td>
+
+</tr>
+<th></th>
+</td>
+</table>
+<!-- Begin Motigo Webstats counter code -->
+<a id="mws4146956" href="http://webstats.motigo.com/">
+<img width="80" height="15" border="0" alt="Free counter and web stats" src="http://m1.webstats.motigo.com/n80x15.gif?id=AD9HDAuKwrKAsWbU/9sHeqW9Bgfw" /></a>
+<script src="http://m1.webstats.motigo.com/c.js?id=4146956&i=3" type="text/javascript"></script>
+<!-- End Motigo Webstats counter code -->
+
+
